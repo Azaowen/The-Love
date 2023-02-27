@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="clock.png" type="image/x-icon">
+  <meta property="og:image" content="http://vht.luminhthong.com/img/fb_thumbnail.png">
+  <link rel="icon" href="/imgs/heart.png">
+  <link href="public/css/count.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="public/css/cursor.css" />
+
+  <title>Timer</title>
+</head>
+
+
+<body>
+  
+  <h1 class="title">BEEN TOGETHER</h1>
+
+  <div class="box">
+
+
+    <div class="about">
+      <div class="info">
+          <img src="images/avt1.jpg" class="avatar">
+          <div class="details">
+            <p class="name">Julio Elias Bonilla <img src="https://em-content.zobj.net/thumbs/160/google/350/flag-puerto-rico_1f1f5-1f1f7.png" class="flag" > 
+                <img src="https://em-content.zobj.net/thumbs/160/google/350/flag-united-states_1f1fa-1f1f8.png" class="flag" </p>
+            <p class="born">March 4, 1991</p>
+          </div>
+        </div>
+
+        <div class="heart-box">
+          <img src="rainbow-heart.png" class="heart">
+        </div>
+    
+        <div class="info">
+          <img src="images/avt2.jpg" class="avatar">
+          <div class="details">
+            <p class="name"> <img src="https://em-content.zobj.net/thumbs/160/google/350/flag-vietnam_1f1fb-1f1f3.png" class="flagvn"> Trung Minh Pham</p>
+            <p class="born">January 22, 2002</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="time">
+      <h2 class="days"><span>00</span>&nbsp;DAYS</h2>
+      <p class="sup-time">
+        <span class="hour">10</span>:<span class="min">20</span>:<span class="second">16</span>
+      </p>
+      <img src="cat-love.gif" class="video">
+
+
+    </div>  
+
+    <p class="say-thank">Thank you for your love !</p>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  
+  var days = document.querySelector('.days span');
+  var hour = document.querySelector('.hour');
+  var min = document.querySelector('.min');
+  var second = document.querySelector('.second');
+
+  var startDate = new Date(2022, 12, 14);
+  days.innerText = Math.floor((new Date - startDate)/86400000);
+  countTime();
+
+  function countTime() {
+    let today = new Date();
+    let ms = (today - startDate) % 86400000;
+    hour.innerText = Math.floor(ms / 3600000);
+    min.innerText = Math.floor(ms % 3600000 / 60000);
+    second.innerText = Math.floor(ms % 3600000 % 60000 / 1000);
+  }
+
+  setInterval(countTime, 1000);
+
+}, false);
+
+
+
+
+  </script>
+
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake" style="color: red;">❤</div>
+  <div class="snowflake">💓</div>
+  <div class="snowflake">💞</div>
+  <div class="snowflake">💗</div>
+  <div class="snowflake">❤️‍🔥</div>
+  <div class="snowflake">🤍</div>
+  <div class="snowflake">💖</div>
+  <div class="snowflake">💝</div>
+  <div class="snowflake">💌</div>
+  <div class="snowflake">💙</div>
+  <div class="snowflake">💚</div>
+  <div class="snowflake">💛</div>
+  <div class="snowflake">💜</div>
+</div>
+
+
+<style>
+  @-webkit-keyframes snowflakes-fall {
+    0% {top:-10%}
+    100% {top:100%}
+  }
+  @-webkit-keyframes snowflakes-shake {
+    0%,100% {-webkit-transform:translateX(0);transform:translateX(0)}
+    50% {-webkit-transform:translateX(80px);transform:translateX(80px)}
+  }
+  @keyframes snowflakes-fall {
+    0% {top:-10%}
+    100% {top:100%}
+  }
+  @keyframes snowflakes-shake {
+    0%,100%{ transform:translateX(0)}
+    50% {transform:translateX(80px)}
+  }
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+    position:fixed;
+    top:-10%;
+    z-index:9999;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    -webkit-animation-name:snowflakes-fall,snowflakes-shake;
+    -webkit-animation-duration:10s,3s;
+    -webkit-animation-timing-function:linear,ease-in-out;
+    -webkit-animation-iteration-count:infinite,infinite;
+    -webkit-animation-play-state:running,running;
+    animation-name:snowflakes-fall,snowflakes-shake;
+    animation-duration:10s,3s;
+    animation-timing-function:linear,ease-in-out;
+    animation-iteration-count:infinite,infinite;
+    animation-play-state:running,running;
+  }
+  .snowflake:nth-of-type(0){
+    left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s
+  }
+  .snowflake:nth-of-type(1){
+    left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s
+  }
+  .snowflake:nth-of-type(2){
+    left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s
+  }
+  .snowflake:nth-of-type(3){
+    left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s
+  }
+  .snowflake:nth-of-type(4){
+    left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s
+  }
+  .snowflake:nth-of-type(5){
+    left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+  }
+  .snowflake:nth-of-type(6){
+    left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+  }
+  .snowflake:nth-of-type(7){
+    left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s
+  }
+  .snowflake:nth-of-type(8){
+    left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s
+  }
+  .snowflake:nth-of-type(9){
+    left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s
+  }
+  .snowflake:nth-of-type(10){
+    left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s
+  }
+  .snowflake:nth-of-type(11){
+    left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s
+  }
+  .snowflake:nth-of-type(12){
+    left:15%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s
+  }
+  .snowflake:nth-of-type(13){
+    left:55%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s
+  }
+</style>
+
+
+ <div class="cursor-dot-outline"></div>
+ <div class="cursor-dot"> <img src="heart.png" > </div>
+
+ <script>
+    var cursor = {
+    delay: 8,
+    _x: 0,
+    _y: 0,
+    endX: (window.innerWidth / 2),
+    endY: (window.innerHeight / 2),
+    cursorVisible: true,
+    cursorEnlarged: false,
+    $dot: document.querySelector('.cursor-dot'),
+    $outline: document.querySelector('.cursor-dot-outline'),
+    
+    init: function() {
+        // Set up element sizes
+        this.dotSize = this.$dot.offsetWidth;
+        this.outlineSize = this.$outline.offsetWidth;
+        
+        this.setupEventListeners();
+        this.animateDotOutline();
+    },
+    
+    // updateCursor: function(e) {
+    //     var self = this;
+        
+    //     console.log(e)
+        
+    //     // Show the cursor
+    //     self.cursorVisible = true;
+    //     self.toggleCursorVisibility();
+
+    //     // Position the dot
+    //     self.endX = e.pageX;
+    //     self.endY = e.pageY;
+    //     self.$dot.style.top = self.endY + 'px';
+    //     self.$dot.style.left = self.endX + 'px';
+    // },
+    
+    setupEventListeners: function() {
+        var self = this;
+        
+        // Anchor hovering
+        document.querySelectorAll('a').forEach(function(el) {
+            el.addEventListener('mouseover', function() {
+                self.cursorEnlarged = true;
+                self.toggleCursorSize();
+            });
+            el.addEventListener('mouseout', function() {
+                self.cursorEnlarged = false;
+                self.toggleCursorSize();
+            });
+        });
+        
+        // Click events
+        document.addEventListener('mousedown', function() {
+            self.cursorEnlarged = true;
+            self.toggleCursorSize();
+        });
+        document.addEventListener('mouseup', function() {
+            self.cursorEnlarged = false;
+            self.toggleCursorSize();
+        });
+  
+  
+        document.addEventListener('mousemove', function(e) {
+            // Show the cursor
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+
+            // Position the dot
+            self.endX = e.pageX;
+            self.endY = e.pageY;
+            self.$dot.style.top = self.endY + 'px';
+            self.$dot.style.left = self.endX + 'px';
+        });
+        
+        // Hide/show cursor
+        document.addEventListener('mouseenter', function(e) {
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        });
+        
+        document.addEventListener('mouseleave', function(e) {
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        });
+    },
+    
+    animateDotOutline: function() {
+        var self = this;
+        
+        self._x += (self.endX - self._x) / self.delay;
+        self._y += (self.endY - self._y) / self.delay;
+        self.$outline.style.top = self._y + 'px';
+        self.$outline.style.left = self._x + 'px';
+        
+        requestAnimationFrame(this.animateDotOutline.bind(self));
+    },
+    
+    toggleCursorSize: function() {
+        var self = this;
+        
+        if (self.cursorEnlarged) {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        } else {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    },
+    
+    toggleCursorVisibility: function() {
+        var self = this;
+        
+        if (self.cursorVisible) {
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        } else {
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        }
+    }
+}
+
+cursor.init();
+ </script>
+ <div class="text-center">
+  <p  style="font-size: 11px;color:red"  >❤ Designed by AZAOWEN exclusively for JULIO  ❤</p>
+  </div>
+
+<!-- <style>
+    html,body{ cursor:url("julio1.png") , auto;}
+    a:hover{cursor:url("julio1.png"), auto;}
+</style> -->
+
+
+</body>
+</html>
